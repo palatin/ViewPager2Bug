@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition app:constraintSetStart="@id/start"
+                app:constraintSetEnd="@id/end"
+    >
+
+        <OnSwipe app:touchAnchorId="@id/rv_ad_content"
+                app:touchAnchorSide="top"
+                 app:moveWhenScrollAtTop="true"
+                 app:dragDirection="dragUp" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start" >
+
+
+
+        <Constraint android:id="@id/vp"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="1.33"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+        >
+
+
+
+
+        </Constraint>
+
+        <Constraint android:id="@id/btn_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:visibilityMode="ignore"
+                    app:layout_constraintDimensionRatio="1.33"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/ad_toolbar"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+        />
+
+        <Constraint android:id="@+id/ad_toolbar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="#0396ff"
+                    android:alpha="0"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+        <Constraint android:id="@+id/btn_ad_chat"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="30dp"
+                    app:visibilityMode="ignore"
+                    app:layout_constraintBottom_toTopOf="@id/view2"
+                    app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/end" >
+
+
+
+        <Constraint android:id="@id/vp"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="999"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+        >
+
+        </Constraint>
+        <Constraint android:id="@+id/ad_toolbar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="#0396ff"
+                    android:alpha="1"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint android:id="@+id/btn_ad_chat"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="30dp"
+                    app:visibilityMode="ignore"
+                    android:layout_marginBottom="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+        />
+
+        <Constraint android:id="@id/btn_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:visibilityMode="ignore"
+                    app:layout_constraintDimensionRatio="1.33"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/ad_toolbar"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+        />
+    </ConstraintSet>
+
+</MotionScene>
