@@ -199,3 +199,6 @@ fabric.properties
 !/gradle/wrapper/gradle-wrapper.jar
 
 # End of https://www.gitignore.io/api/android,androidstudio
+.idea/runConfigurations.xml
+.idea/codeStyles/Project.xml
+.idea/codeStyles/codeStyleConfig.xml
